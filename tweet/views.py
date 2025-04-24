@@ -12,16 +12,18 @@ def tweet_list(request):
     return render(request, 'tweet_list.html', {'tweets': tweets})
 
 def tweet_create(request):
-        if request.method == 'POST':
-            form = TweetForm(request.POST, request.FILES)
+    if request.method == 'POST':
+        form = TweetForm(request.POST, request.FILES)
         if form.is_valid():
             tweet = form.save(commit=False)
             tweet.user = request.user 
             tweet.save()
             return redirect('tweet_list')
-        else:
-            form = TweetForm()
-        return render(request, 'tweet_form.html', {'form': form})
+    else:
+        form = TweetForm()
+        
+    return render(request, 'tweet_form.html', {'form': form})
+
 
 
 def tweet_edit(request, tweet_id):
