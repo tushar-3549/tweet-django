@@ -133,3 +133,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 STATIC_URL = "static/"
 # Path where static files are stored
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/tweet/'
+LOGOUT_REDIRECT_URL = '/tweet/'
+
+
