@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-yf33w5im19!$rt9#x-+cjh&dzv9$0fd+(l$yaev%3+9$_1t%94
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["tweet-django-bkgn.onrender.com", "localhost", "127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://tweet-django-bkgn.onrender.com",
+]
 
 
 # Application definition
